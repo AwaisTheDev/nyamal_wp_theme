@@ -1,0 +1,57 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font__headings;
+	clear: both;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+}
+
+h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 84px;
+}
+
+h2 {
+	color: #000000;
+	margin-top: 0px;
+	margin-bottom: 0.5em;
+	font-size: 62px;
+
+	@include responsive(medium) {
+		font-size: 44px;
+	}
+
+	@include responsive(small) {
+		font-size: 36px;
+	}
+
+	.styled {
+		color: $color__background-button;
+		font-family: $font__styled;
+		font-size: 46px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: 1.38px;
+
+		@include responsive(medium) {
+			font-size: 32px;
+		}
+
+		@include responsive(small) {
+			font-size: 26px;
+		}
+	}
+}
+
+h3 {
+	font-size: 36px;
+	letter-spacing: 0.9px;
+	line-height: 1.2;
+}

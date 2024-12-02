@@ -1,0 +1,258 @@
+.site-footer {
+
+    color: #000;
+    background: url('./assets/images/footer-bg.png');
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    z-index: 99;
+
+    .nyamal-container {
+        max-width: 1450px;
+    }
+
+    a {
+        color: #000;
+    }
+
+    .footer-main {
+        padding: 180px 0px 100px;
+
+        @include responsive(small) {
+            padding: 120px 0px 50px;
+        }
+
+        .footer-main-inner {
+            display: flex;
+            gap: 48px;
+            justify-content: space-between;
+
+            @include responsive(medium) {
+                flex-direction: column;
+            }
+
+            .col1 {
+                width: 33.33%;
+                display: flex;
+                flex-direction: column;
+                gap: 55px;
+
+
+                @include responsive(medium) {
+                    width: 100%;
+                }
+
+                @include responsive(small) {
+                    gap: 32px
+                }
+
+                .custom-logo {
+                    width: 125px;
+
+                    @include responsive(small) {
+                        width: 100px;
+                    }
+                }
+
+                .newsletter-form-wapper {}
+
+                .footer-locations {
+
+                    ul.grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 50px;
+
+                        @include responsive(medium) {
+                            grid-template-columns: 1fr;
+                            gap: 32px;
+                        }
+
+                        li.card {
+                            ul.icon-list {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 16px;
+
+                                @include responsive(small) {
+                                    font-size: 14px;
+                                }
+
+                                li {
+                                    opacity: 0.8;
+                                    display: flex;
+                                    gap: 12px;
+                                    align-items: flex-start;
+
+                                    img {
+                                        width: 22px;
+                                        flex-shrink: 0;
+                                    }
+
+                                    a {
+                                        text-decoration: none;
+                                        transition: 0.3s;
+
+                                        &:hover {
+                                            color: $color__background-button;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .social-icons-list {
+                                display: flex;
+                                gap: 24px;
+                                align-items: center;
+
+                                img {
+                                    width: 22px;
+                                    height: 22px;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .col2 {
+                width: 66.66%;
+
+                @include responsive(medium) {
+                    width: 100%;
+                }
+
+                .footer-menus-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 50px;
+                    margin-bottom: 50px;
+
+                    @include responsive(small) {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 24px
+                    }
+
+                    .card {
+                        max-width: 235px;
+
+                        ul.menu {
+                            display: flex;
+                            flex-direction: column;
+                            line-height: 1.2em;
+                            font-size: 16px;
+                            gap: 8px;
+
+                            @include responsive(small) {
+                                font-size: 14px;
+                            }
+
+                            li {
+                                a {
+                                    text-decoration: none;
+                                    opacity: 0.8;
+                                    transition: 0.3s;
+
+                                    &:hover {
+                                        color: $color__background-button;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .acknowledgement {
+                    p {
+                        font-size: 16px;
+                        opacity: 0.8;
+                        line-height: 1.4;
+
+                        @include responsive(small) {
+                            font-size: 14px;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+
+            li {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            line-height: 1em;
+
+            @include responsive(small) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-image: url('./assets/images/footer-bottom-bg.svg');
+        padding: 50px 0 30px;
+        background-position: top center;
+        background-size: cover;
+
+        .footer-bottom-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+
+            @include responsive(small) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            p {
+                margin: 0px;
+                font-size: 16px;
+
+                @include responsive(small) {
+                    font-size: 14px;
+                }
+            }
+
+            ul.menu {
+                display: flex;
+                gap: 24px;
+                list-style: none;
+                font-size: 16px;
+                line-height: 1.4;
+                color: black;
+                padding: 0px;
+                margin: 0px;
+
+                @include responsive(small) {
+                    font-size: 14px;
+                }
+
+
+                a {
+                    text-decoration: none;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}

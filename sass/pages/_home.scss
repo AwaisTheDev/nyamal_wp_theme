@@ -1,0 +1,648 @@
+.homepage-banner {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    .shape-divider {
+        position: absolute;
+        width: 100%;
+        display: flex;
+
+        &.top {
+            top: 0px;
+        }
+
+        &.bottom {
+            bottom: 0px;
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .inner {
+        padding: 150px 0px 240px;
+
+        @include responsive(medium) {
+            padding: 50px 0px 80px;
+        }
+
+        @include responsive(small) {
+            padding: 30px 0px 40px;
+        }
+
+        h1 {
+            font-size: 105px;
+            color: white;
+            line-height: 1;
+            max-width: 517px;
+            margin: 0px;
+
+            @include responsive(medium) {
+                font-size: 80px;
+            }
+
+            @include responsive(small) {
+                font-size: 44px;
+            }
+
+            .styled {
+                font-size: 46px;
+                font-family: $font__styled;
+                font-weight: 500;
+
+                @include responsive(medium) {
+                    font-size: 40px;
+                }
+
+                @include responsive(small) {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .divider {
+            margin: 38px 0px;
+
+            @include responsive(medium) {
+                margin: 24px 0px;
+            }
+
+            @include responsive(small) {
+                width: 80%;
+
+                svg {
+                    width: 100%;
+                    ;
+                }
+            }
+        }
+
+        .description {
+            color: white;
+            font-size: 22px;
+            line-height: 1.4;
+            max-width: 438px;
+
+            @include responsive(medium) {
+                font-size: 20px;
+            }
+
+            @include responsive(small) {
+                font-size: 18px;
+            }
+        }
+
+        .banner-card {
+            position: absolute;
+            bottom: 80px;
+            right: 50px;
+            max-width: 373px;
+            padding: 55px;
+
+            .bg-element {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+
+            @include responsive(small) {
+                padding: 24px;
+            }
+
+            @include responsive(medium) {
+                position: relative;
+                right: unset;
+                bottom: unset;
+            }
+
+            .content {
+                z-index: 2;
+                position: relative;
+            }
+
+            h3 {
+                font-size: 34px;
+                font-family: $font__headings;
+                line-height: 1;
+                color: #000;
+                margin: 0px;
+
+                @include responsive(small) {
+                    font-size: 24px;
+                }
+
+                .styled {
+                    font-size: 24px;
+                    font-family: $font__styled;
+                    color: $color__background-button;
+                    margin-bottom: 12px;
+                    display: inline-block;
+
+                    @include responsive(small) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .description {
+                font-size: 19px;
+                line-height: 1.5;
+                color: #000;
+                margin: 0px;
+                margin-top: 12px;
+                margin-bottom: 25px;
+
+                @include responsive(small) {
+                    font-size: 16px;
+                }
+            }
+
+            a {
+                background-image: url("./assets/images/button-bg-yellow.svg");
+                padding: 24px 58px;
+                text-decoration: none;
+
+                @include responsive(small) {
+                    padding: 20px 32px;
+                }
+            }
+        }
+    }
+}
+
+
+.nyamal-people {
+    padding: 100px 0px 50px;
+    overflow: hidden;
+    position: relative;
+
+    @include responsive(small) {
+        padding: 60px 0px 20px;
+    }
+
+    .inner {
+        width: 540px;
+        max-width: 50%;
+
+        @include responsive(small) {
+            width: 100%;
+            max-width: unset;
+            ;
+        }
+
+        blockquote {
+            margin-top: 80px;
+
+            @include responsive(small) {
+                margin-top: 60px;
+            }
+        }
+
+
+        a {
+            margin-top: 40px;
+            display: inline-block;
+        }
+    }
+
+    .map {
+        position: absolute;
+        left: calc(50% + 100px);
+        top: 55%;
+        transform: translateY(-50%);
+        max-height: 90%;
+
+        @include responsive(small) {
+            position: relative;
+            left: unset;
+            top: unset;
+            max-height: unset;
+            transform: unset;
+            margin-top: 32px;
+        }
+    }
+}
+
+.nyamal-mean {
+    background-color: #F8EDE6;
+    background-image: url('./assets/images/home/section2-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding: 100px 0px 120px;
+    position: relative;
+    overflow: hidden;
+
+    @include responsive(medium) {
+        padding: 80px 0px;
+    }
+
+    @include responsive(small) {
+        padding: 60px 0px;
+    }
+
+    .shape-divider {
+        display: flex;
+        z-index: 2;
+
+
+
+
+        &.bottom {
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: -4px;
+
+            svg {
+                width: 1920px;
+            }
+
+            path {
+                fill: #FBF9F6;
+            }
+        }
+    }
+
+    .design-element {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+        max-width: 500px;
+
+        @include responsive(medium) {
+            max-width: 40%;
+        }
+    }
+
+
+    .inner {
+        display: flex;
+        gap: 170px;
+
+        @include responsive(medium) {
+            flex-direction: column;
+            gap: 50px
+        }
+
+        .col-left {
+            max-width: 543px;
+
+            a {
+                margin-top: 10px;
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
+
+        .col-right {
+            color: #000;
+            margin-top: 40px;
+            font-size: 36px;
+            line-height: 1.2;
+            letter-spacing: 1.08px;
+            font-family: $font__styled;
+
+            @include responsive(medium) {
+                margin-top: 0px;
+                font-size: 30px;
+            }
+
+            @include responsive(small) {
+                font-size: 24px;
+            }
+
+            .side-content {
+                line-height: 1.3;
+
+                p {
+                    margin-bottom: 40px;
+
+                    @include responsive(small) {
+                        margin-bottom: 24px;
+                    }
+                }
+
+                span {
+                    position: relative;
+                    display: inline-block;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -2px;
+                        width: 100%;
+                        left: 0px;
+                        height: 3px;
+                    }
+
+                    &.nyamal {
+                        &::before {
+                            background-image: url('./assets/images/nyamal-word-bb.svg');
+
+                        }
+                    }
+
+                    &.law {
+                        &::before {
+                            background-image: url('./assets/images/law-word-bb.svg');
+
+                        }
+                    }
+
+                    &.land {
+                        &::before {
+                            background-image: url('./assets/images/land-word-bb.svg');
+
+                        }
+                    }
+
+                    &.language {
+                        &::before {
+                            background-image: url('./assets/images/language-word-bb.svg');
+
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}
+
+.determination {
+    position: relative;
+    background-image: url('./assets/images/home/determination-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0px;
+
+
+    .graphic {
+        position: absolute;
+        left: 0px;
+        top: 100px;
+        max-width: 150px;
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+.determination-content {
+    .inner {
+        display: flex;
+        gap: 80px;
+        flex-wrap: wrap;
+
+        @include responsive(medium) {
+            gap: 24px;
+        }
+
+        @include responsive(small) {
+            gap: 0px;
+        }
+
+        .content {
+            max-width: 635px;
+        }
+    }
+
+    .deternimation-video-trigger {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        margin-top: 24px;
+
+        img {
+            width: 100%;
+        }
+
+        .video-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            svg {
+                @include responsive(small) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+
+            p {
+                font-size: 24px;
+                color: white;
+                line-height: 1.2;
+                max-width: 330px;
+                font-weight: 600;
+                margin-bottom: 0px;
+                ;
+
+                @include responsive(small) {
+                    font-size: 14px;
+                    max-width: 160px;
+                }
+            }
+        }
+    }
+}
+
+.culture {
+    padding: 100px 0px;
+
+    @include responsive(small) {
+        padding: 60px 0px;
+    }
+
+    .inner {
+        display: flex;
+        gap: 100px;
+        align-items: center;
+
+        @include responsive(medium) {
+            gap: 50px;
+        }
+
+        @include responsive(small) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        img {
+            max-width: 45%;
+
+            @include responsive(medium) {
+                width: 35%;
+            }
+
+            @include responsive(small) {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.aborginal-corporation {
+    position: relative;
+
+    .inner {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 80px 40px;
+
+        @include responsive(small) {
+            padding: 32px 24px;
+        }
+
+        .bg-image {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        h2 {
+            z-index: 5;
+            position: relative;
+        }
+
+        .description {
+            z-index: 5;
+            position: relative;
+            max-width: 820px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        a {
+            z-index: 5;
+            position: relative;
+        }
+    }
+
+}
+
+
+.nyamal-members {
+    padding: 100px 0px;
+    position: relative;
+
+    @include responsive(medium) {
+        padding: 80px 0px 50px;
+    }
+
+    @include responsive(small) {
+        padding: 60px 0px;
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        @include responsive(medium) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        @include responsive(small) {
+            gap: 0px
+        }
+
+        .description {
+            max-width: 370px;
+        }
+
+        .right {
+            max-width: 542px;
+            font-size: 30px;
+            font-family: $font__styled;
+
+
+
+            @include responsive(medium) {
+                max-width: unset;
+                font-size: 26px;
+            }
+
+            @include responsive(small) {
+                font-size: 22px;
+            }
+
+            p {
+                margin-bottom: 1.2em;
+                color: #000;
+            }
+
+            span {
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    width: 100%;
+                    left: 0px;
+                    height: 3px;
+                }
+
+                &.ancestors {
+                    &::before {
+                        background-image: url('./assets/images//home/ancestors-word-bb.svg');
+
+                    }
+                }
+
+                &.elders {
+                    &::before {
+                        background-image: url('./assets/images/home/elders-word-bb.svg');
+
+                    }
+                }
+
+                &.respect {
+                    &::before {
+                        background-image: url('./assets/images/home/respect-word-bb.svg');
+
+                    }
+                }
+
+                &.care {
+                    &::before {
+                        background-image: url('./assets/images/home/care-word-bb.svg');
+
+                    }
+                }
+
+                &.knowledge {
+                    &::before {
+                        background-image: url('./assets/images/home/knowledge-word-bb.svg');
+
+                    }
+                }
+
+            }
+
+        }
+    }
+}

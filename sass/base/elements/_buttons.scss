@@ -1,0 +1,41 @@
+button,
+a.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0px solid;
+	border-radius: 0px;
+	font-weight: 700;
+	font-size: 20px;
+	font-family: $font__main;
+	line-height: 1;
+	padding: 24px 40px;
+	display: inline-block;
+	text-transform: uppercase;
+	background-image: url('./assets/images/button-bg.svg');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: white;
+	transition: 0.3s;
+	text-decoration: none;
+
+	&.secondary {
+		color: $color__background-button;
+		background-image: url('./assets/images/button-bg-secondary.svg');
+	}
+
+	&.bigger {
+		background-image: url('./assets/images/button-bg-secondary-bigger.svg');
+	}
+
+
+	@include responsive(small) {
+		font-size: 18px;
+		;
+		padding: 16px 25px;
+	}
+
+	&:active,
+	&:focus {}
+}

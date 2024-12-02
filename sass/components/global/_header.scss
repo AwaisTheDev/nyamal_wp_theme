@@ -1,0 +1,43 @@
+.site-header {
+    padding: 24px 0px;
+
+
+    @include responsive(small) {
+        padding: 16px 0px;
+    }
+
+    .nyamal-container {
+        max-width: 1510px;
+    }
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .site-branding {
+
+            @include responsive(medium) {
+                z-index: 999;
+            }
+
+            a {
+                img {
+                    width: 134px;
+
+                    @include responsive(medium) {
+                        width: 100px;
+                    }
+
+                    @include responsive(small) {
+                        width: 90px;
+                    }
+
+                    @include responsive(smallest) {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

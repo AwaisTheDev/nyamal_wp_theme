@@ -1,0 +1,38 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns );
+}
+
+
+@mixin responsive($breakpoint) {
+	@if $breakpoint ==smallest {
+		@media (max-width: 425px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint ==small {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint ==medium {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint ==large {
+		@media (min-width: 1025px) {
+			@content;
+		}
+	}
+}
