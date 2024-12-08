@@ -1,0 +1,135 @@
+.ourngura-section1 {
+    &.native-title {
+        h2 {
+            margin-top: 60px;
+            margin-bottom: 50px;
+            max-width: 1000px;
+        }
+
+
+        .two-cols {
+            gap: 40px;
+
+            @include responsive(medium) {
+                flex-direction: column;
+            }
+
+            blockquote {
+                font-size: 20px;
+
+                p {
+                    margin-bottom: 1em;
+
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+            .right {
+                max-width: 400px;
+
+                @include responsive(medium) {
+                    max-width: 100%;
+                }
+
+                blockquote {
+                    font-size: 16px;
+                    font-family: $font__headings;
+
+                    p {
+                        line-height: 1.55;
+                    }
+
+                    &::before {
+                        background-image: url('./assets/images/blockquote2.png');
+                        width: 13px;
+
+                        @include responsive(medium) {
+                            background-position: left center;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.deternimation-video-trigger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-top: 24px;
+
+
+
+    img {
+        width: 100%;
+    }
+
+    .video-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        svg {
+            @include responsive(small) {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+
+        p {
+            font-size: 24px;
+            color: white;
+            line-height: 1.2;
+            max-width: 330px;
+            font-weight: 600;
+            margin-bottom: 0px;
+            ;
+
+            @include responsive(small) {
+                font-size: 14px;
+                max-width: 160px;
+            }
+        }
+    }
+
+    .modal-video-close-btn {
+        right: 0px;
+    }
+}
+
+.section-determination-area {
+
+    .two-cols {
+        display: flex;
+        gap: 100px;
+        align-items: center;
+        justify-content: space-between;
+
+        @include responsive(medium) {
+            gap: 50px
+        }
+
+        @include responsive(small) {
+            flex-direction: column-reverse;
+            gap: 32px;
+        }
+
+        .left {
+            max-width: 490px;
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 24px;
+        }
+    }
+
+}

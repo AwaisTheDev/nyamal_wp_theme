@@ -16,7 +16,10 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<div class="nyamal-container">
+
+	<?php echo get_template_part('template-parts/global/section', "pagetitle") ?> 
+		<div class="padding-vertical">
+			<div class="nyamal-container">
 			<?php
 				while ( have_posts() ) :
 					the_post();
@@ -30,6 +33,7 @@ get_header();
 
 				endwhile; // End of the loop.
 			?>
+		</div>
 		</div>
 
 	</main><!-- #main -->

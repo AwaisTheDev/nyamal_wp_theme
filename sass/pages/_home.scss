@@ -109,7 +109,6 @@
                 left: 0px;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
                 z-index: 1;
             }
 
@@ -178,59 +177,6 @@
     }
 }
 
-
-.nyamal-people {
-    padding: 100px 0px 50px;
-    overflow: hidden;
-    position: relative;
-
-    @include responsive(small) {
-        padding: 60px 0px 20px;
-    }
-
-    .inner {
-        width: 540px;
-        max-width: 50%;
-
-        @include responsive(small) {
-            width: 100%;
-            max-width: unset;
-            ;
-        }
-
-        blockquote {
-            margin-top: 80px;
-
-            @include responsive(small) {
-                margin-top: 60px;
-            }
-        }
-
-
-        a {
-            margin-top: 40px;
-            display: inline-block;
-        }
-    }
-
-    .map {
-        position: absolute;
-        left: calc(50% + 100px);
-        top: 55%;
-        transform: translateY(-50%);
-        max-height: 90%;
-
-        @include responsive(small) {
-            position: relative;
-            left: unset;
-            top: unset;
-            max-height: unset;
-            transform: unset;
-            margin-top: 32px;
-        }
-    }
-}
-
 .nyamal-mean {
     background-color: #F8EDE6;
     background-image: url('./assets/images/home/section2-bg.jpg');
@@ -252,9 +198,6 @@
         display: flex;
         z-index: 2;
 
-
-
-
         &.bottom {
             position: absolute;
             width: 100%;
@@ -271,16 +214,18 @@
         }
     }
 
-    .design-element {
+    &::before {
+        content: "";
         position: absolute;
+        width: 30%;
+        height: 100%;
+        background-image: url('./assets/images/nyamal-mean-graphic.svg');
+        background-position: bottom right;
+        background-size: contain;
+        z-index: 2;
         right: 0px;
         bottom: 0px;
-        z-index: 1;
-        max-width: 500px;
-
-        @include responsive(medium) {
-            max-width: 40%;
-        }
+        background-repeat: no-repeat;
     }
 
 
@@ -380,12 +325,76 @@
     }
 }
 
+.nyamal-people {
+    padding: 100px 0px 50px;
+    overflow: hidden;
+    position: relative;
+
+    @include responsive(small) {
+        padding: 60px 0px 20px;
+    }
+
+    .inner {
+        width: 540px;
+        max-width: 50%;
+
+        @include responsive(small) {
+            width: 100%;
+            max-width: unset;
+            ;
+        }
+
+        blockquote {
+            margin-top: 80px;
+
+            @include responsive(small) {
+                margin-top: 60px;
+            }
+        }
+
+
+        a {
+            margin-top: 40px;
+            display: inline-block;
+        }
+    }
+
+    .map {
+        position: absolute;
+        left: calc(50% + 100px);
+        top: 55%;
+        transform: translateY(-50%);
+        max-height: 90%;
+
+        @include responsive(small) {
+            position: relative;
+            left: unset;
+            top: unset;
+            max-height: unset;
+            transform: unset;
+            margin-top: 32px;
+        }
+    }
+}
+
+
 .determination {
     position: relative;
     background-image: url('./assets/images/home/determination-bg.svg');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 80px 0px;
+
+    &::before {
+        content: "";
+        width: 12%;
+        height: 100%;
+        background-image: url('./assets/images/determination-graphic.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        position: absolute;
+    }
 
 
     .graphic {
@@ -401,6 +410,22 @@
 }
 
 .determination-content {
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 50%;
+        height: 120%;
+        right: 0px;
+        bottom: -20%;
+        background-image: url('./assets/images/determination-tree.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        position: absolute;
+
+    }
+
     .inner {
         display: flex;
         gap: 80px;

@@ -1,0 +1,59 @@
+.ourngura-section1 {
+    &.programs-main {
+        .description {
+            p {
+                color: #000;
+            }
+        }
+
+        ul {
+            font-size: 18px;
+        }
+    }
+}
+
+.story-nyamal-people {
+    &.programs {
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 32px;
+
+            @include responsive(medium) {
+                gap: 16px;
+            }
+
+            @include responsive(small) {
+                font-size: 18px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 32px;
+            }
+
+            @include responsive(smallest) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            a {
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                    h3 {
+                        color: red;
+                    }
+                }
+
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 0px;
+                    margin-top: 24px;
+                    transition: 0.3s;
+
+                    @include responsive(medium) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

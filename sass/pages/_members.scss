@@ -1,0 +1,160 @@
+.members-main {
+    p {
+        margin-bottom: 0px;
+        font-weight: 500;
+        color: #000;
+    }
+}
+
+.members-application {
+    p {
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.members-application-form {
+    .gform_wrapper {
+        .gform_title {
+            display: none;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 0.5em;
+
+            @include responsive(small) {
+                font-size: 24px;
+            }
+        }
+
+        h3 {
+            color: #2E2B2C;
+            font-size: 22px;
+            margin-top: 2em;
+            margin-bottom: 0px;
+
+            @include responsive(small) {
+                font-size: 18px;
+            }
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+
+        .mb-0 {
+            margin-bottom: 0px;
+        }
+
+        label {
+            display: none;
+        }
+
+        legend {
+            display: none;
+        }
+
+        fieldset {
+            &.gfield--type-name {
+
+                .ginput_container--name {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 2%;
+
+                    @include responsive(small) {
+                        grid-template-columns: 1fr !important;
+                        grid-gap: 16px;
+                    }
+                }
+
+            }
+
+            .ginput_container_radio {
+                .gfield_radio {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+                    flex-wrap: wrap;
+
+                    @include responsive(small) {
+                        gap: 16px
+                    }
+
+
+                    .gchoice {
+                        display: flex;
+                        gap: 12px;
+                        align-items: center;
+
+                        input {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 49% 51% 53% 47% / 47% 38% 62% 53%;
+                        }
+
+                        label {
+                            display: block;
+                            font-size: 22px;
+
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .form-divider {
+            margin: 50px 0px;
+
+            svg {
+                width: 100%;
+            }
+        }
+
+        .heading-and-title {
+            p {
+                margin-bottom: 0px;
+            }
+        }
+
+        .gfield--type-fileupload {
+            label {
+                display: none;
+            }
+
+            .gform_fileupload_rules {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+.update-details {
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+.membership-feedback {
+    .form {
+        h2 {
+            display: none;
+
+        }
+
+        label {
+            display: none;
+        }
+
+        legend {
+            display: none;
+        }
+    }
+}

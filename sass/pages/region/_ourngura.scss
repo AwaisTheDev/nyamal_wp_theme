@@ -1,0 +1,78 @@
+.ourngura-section1 {
+    .inner {
+        .two-cols {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            gap: 95px;
+
+            @include responsive(medium) {
+                flex-wrap: wrap;
+                gap: 32px;
+                flex-direction: column-reverse;
+                margin-top: 32px;
+            }
+
+            .body24 {
+                color: #000;
+            }
+
+            .description {
+                max-width: 500px;
+                width: 100%;
+
+                @include responsive(medium) {
+                    max-width: 100%;
+                }
+            }
+
+            img {
+                flex: 1;
+
+                @include responsive(medium) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.story-nyamal-people {
+    &.ourngura {
+        .inner {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            justify-content: space-between;
+
+            @include responsive(medium) {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            img {
+                @include responsive(medium) {
+                    width: 100%;
+                }
+            }
+
+            .content {
+                max-width: 490px;
+                width: 100%;
+
+                @include responsive(medium) {
+                    max-width: 100%;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 24px;
+
+                    @include responsive(small) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

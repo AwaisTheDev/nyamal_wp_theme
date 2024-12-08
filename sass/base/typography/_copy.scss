@@ -82,6 +82,21 @@ big {
 	font-size: 125%;
 }
 
+
+.body18 {
+	color: #393738;
+	font-size: 18px;
+	line-height: 1.55;
+
+	@include responsive(medium) {
+		font-size: 17px;
+	}
+
+	@include responsive(small) {
+		font-size: 15px;
+	}
+}
+
 .body19 {
 	color: #393738;
 	font-size: 19px;
@@ -93,5 +108,87 @@ big {
 
 	@include responsive(small) {
 		font-size: 16px;
+	}
+}
+
+.body20 {
+	color: #393738;
+	font-size: 20px;
+	line-height: 1.55;
+
+	@include responsive(medium) {
+		font-size: 18px;
+	}
+
+	@include responsive(small) {
+		font-size: 16px;
+	}
+}
+
+.body22 {
+	color: #393738;
+	font-size: 22px;
+	line-height: 1.4;
+
+	@include responsive(medium) {
+		font-size: 20px;
+	}
+
+	@include responsive(small) {
+		font-size: 18px;
+	}
+}
+
+.body24 {
+	color: #393738;
+	font-size: 24px;
+	line-height: 1.4;
+
+	@include responsive(medium) {
+		font-size: 22px;
+	}
+
+	@include responsive(small) {
+		font-size: 20px;
+	}
+}
+
+.sunbright30 {
+	font-size: 30px;
+	font-family: $font__styled;
+	line-height: 1.2;
+	letter-spacing: 0.9px;
+
+	@include responsive(small) {
+		font-size: 24px;
+	}
+}
+
+ul {
+	&.nyamal {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		li {
+			padding-left: 1.5em;
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0.6em;
+				left: 0px;
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				border-radius: 35% 65% 65% 35% / 51% 44% 56% 49%;
+				background-color: $color__background-button;
+				margin-right: 8px;
+			}
+		}
 	}
 }

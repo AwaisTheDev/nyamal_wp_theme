@@ -15,6 +15,14 @@ h1 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-size: 84px;
+
+	@include responsive(medium) {
+		font-size: 64px;
+	}
+
+	@include responsive(small) {
+		font-size: 50px;
+	}
 }
 
 h2 {
@@ -54,4 +62,23 @@ h3 {
 	font-size: 36px;
 	letter-spacing: 0.9px;
 	line-height: 1.2;
+	color: #000000;
+	margin-top: 0px;
+
+	@include responsive(medium) {
+		font-size: 30px;
+	}
+
+	@include responsive(small) {
+		font-size: 24px;
+	}
+}
+
+.heading30 {
+	font-size: 30px;
+
+	@include responsive(small) {
+		font-size: 24px;
+	}
+
 }

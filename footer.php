@@ -32,7 +32,7 @@ $copyright = get_field('copyright', 'options');
 					<?php the_custom_logo(); ?>
 					<div class="newsletter-form-wapper">
 						<h4><?php echo $newsletters_title ?></h4>
-						<?php do_shortcode($newsletter_shortcode)?>
+						<?php echo do_shortcode($newsletter_shortcode)?>
 					</div>
 					<div class="footer-locations">
 						<?php if($locations) : ?>

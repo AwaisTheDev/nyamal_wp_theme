@@ -1,5 +1,7 @@
-new ModalVideo('.deternimation-video-trigger');
-
+// Check if the video trigger element exists
+if (document.querySelector('.deternimation-video-trigger')) {
+    new ModalVideo('.deternimation-video-trigger');
+}
 
 // Initialize Swiper
 const swiperPosts = new Swiper('.swiper-posts-container', {
@@ -28,10 +30,15 @@ const swiperPosts = new Swiper('.swiper-posts-container', {
 });
 
 // Custom navigation event listeners
-document.querySelector('.custom-prev-button').addEventListener('click', () => {
-    swiperPosts.slidePrev();
-});
 
-document.querySelector('.custom-next-button').addEventListener('click', () => {
-    swiperPosts.slideNext();
-});
+if (document.querySelector('.custom-prev-button')) {
+    document.querySelector('.custom-prev-button').addEventListener('click', () => {
+        swiperPosts.slidePrev();
+    });
+}
+
+if (document.querySelector('.custom-next-button')) {
+    document.querySelector('.custom-next-button').addEventListener('click', () => {
+        swiperPosts.slideNext();
+    });
+}

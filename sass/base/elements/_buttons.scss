@@ -14,7 +14,7 @@ input[type="submit"] {
 	text-transform: uppercase;
 	background-image: url('./assets/images/button-bg.svg');
 	background-position: center center;
-	background-size: contain;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	color: white;
 	transition: 0.3s;

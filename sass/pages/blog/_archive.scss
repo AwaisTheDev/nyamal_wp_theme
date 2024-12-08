@@ -1,0 +1,66 @@
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+
+    @include responsive(medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(small) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    article {
+        a {
+            text-decoration: none;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .entry-content {
+            margin-top: 12px;
+
+            .date {
+                font-size: 19px;
+                line-height: 1.1;
+                margin-bottom: 0.5em;
+            }
+
+            h3 {
+                font-size: 28px;
+                line-height: 1.1;
+            }
+        }
+    }
+}
+
+.navigation.pagination {
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        .page-numbers {
+            display: block;
+            min-width: 32px;
+            line-height: 32px;
+            padding: 4px 12px;
+            background-color: #f2f2f2;
+            border-radius: 6px;
+            transition: 0.3s;
+            text-decoration: none;
+
+            &.current {
+                color: white;
+                background-color: $color__background-button;
+            }
+        }
+    }
+
+
+}

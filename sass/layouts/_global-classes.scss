@@ -1,0 +1,23 @@
+.padding-vertical {
+    padding: 100px 0px;
+
+    @include responsive(medium) {
+        padding: 80px 0px;
+    }
+
+    @include responsive(small) {
+        padding: 60px 0px;
+    }
+}
+
+.padding-vertical-large {
+    padding: 150px 0px;
+
+    @include responsive(medium) {
+        padding: 120px 0px;
+    }
+
+    @include responsive(small) {
+        padding: 100px 0px;
+    }
+}

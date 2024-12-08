@@ -1,0 +1,404 @@
+.story-overview {
+    padding: 100px 0px;
+
+    @include responsive(medium) {
+        padding: 60px 0px;
+    }
+
+    .inner {
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+
+
+        @include responsive(medium) {
+            gap: 40px;
+            align-items: center
+        }
+
+        @include responsive(small) {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .content {
+            max-width: 500px;
+        }
+    }
+}
+
+.story-nyamal-people {
+    background-color: #F8EDE6;
+    background-image: url('./assets/images/home/section2-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding: 150px 0px 100px;
+    position: relative;
+    overflow: hidden;
+
+    @include responsive(medium) {
+        padding: 80px 0px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        background-image: url('./assets/images/nyamal-mean-graphic.svg');
+        background-position: bottom right;
+        background-size: contain;
+        z-index: 2;
+        right: 0px;
+        bottom: 0px;
+        background-repeat: no-repeat;
+    }
+
+    .shape-divider {
+        display: flex;
+        z-index: 2;
+
+        &.top {
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: -2px;
+
+            svg {
+                width: 1920px;
+            }
+
+            path {
+                fill: #FBF9F6;
+            }
+        }
+
+        &.bottom {
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: -4px;
+
+            svg {
+                width: 1920px;
+            }
+
+            path {
+                fill: #FBF9F6;
+            }
+        }
+    }
+
+    .inner {
+        .title-quote {
+            display: flex;
+            gap: 100px;
+            align-items: center;
+            margin-bottom: 60px;
+
+            @include responsive(medium) {
+                gap: 020px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h2 {
+                max-width: 260px;
+
+                @include responsive(medium) {
+                    max-width: 550px;
+                }
+            }
+        }
+
+        .description {
+            .two-cols {
+                columns: 2;
+                gap: 76px;
+                margin-bottom: 2em;
+
+
+                @include responsive(medium) {
+                    columns: 1;
+                    gap: 1.5em;
+                    margin-bottom: 0px;
+
+                }
+            }
+        }
+    }
+}
+
+.story-history {
+    padding: 100px 0px;
+
+    .inner {
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+
+            @include responsive(medium) {
+                gap: 32px;
+            }
+
+            .item {
+                display: flex;
+
+                @include responsive(small) {
+                    flex-direction: column;
+                }
+
+                .year {
+                    width: 200px;
+                    flex-shrink: 0;
+                    font-size: 30px;
+                    font-family: $font__styled;
+                    color: #DA2128;
+
+                    @include responsive(medium) {
+                        width: 150px;
+                        font-size: 24px;
+                    }
+
+                    @include responsive(small) {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+
+        blockquote {
+            margin-left: 200px;
+            margin-top: 60px;
+
+            @include responsive(medium) {
+                margin-left: 150px;
+            }
+
+            @include responsive(small) {
+                margin-left: 0px;
+            }
+        }
+
+        img {
+            margin-top: 80px;
+
+            @include responsive(small) {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.story-council {
+    padding: 0px 0px 100px;
+
+    .inner {
+        blockquote {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-row-gap: 30px;
+            grid-column-gap: 80px;
+            margin-top: 50px;
+            font-size: 30px;
+            font-family: $font__styled;
+            color: #000;
+
+            @include responsive(medium) {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 50px;
+            }
+
+            @include responsive(small) {
+                grid-template-columns: 1fr 1fr;
+                padding-left: 24px;
+                grid-column-gap: 12px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.story-board-directors {
+    padding: 150px 0px;
+    background-color: #F8EDE6;
+    background-image: url('./assets/images/home/section2-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    @include responsive(medium) {
+        padding: 80px 0px;
+    }
+
+    .inner {
+        z-index: 99;
+        position: relative;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 40%;
+        height: 100%;
+        background-image: url('./assets/images/our-story/bod.svg');
+        background-position: bottom left;
+        background-size: contain;
+        z-index: 1;
+        background-repeat: no-repeat;
+    }
+
+    .shape-divider {
+        display: flex;
+        z-index: 2;
+
+        &.top {
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: -2px;
+
+            svg {
+                width: 1920px;
+            }
+
+            path {
+                fill: #FBF9F6;
+            }
+        }
+
+        &.bottom {
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: -4px;
+
+            svg {
+                width: 1920px;
+            }
+
+            path {
+                fill: #FBF9F6;
+            }
+        }
+    }
+
+    .board-directors-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin-top: 90px;
+
+        @include responsive(medium) {
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        @include responsive(small) {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px 20px;
+            margin-top: 32px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .name {
+            font-size: 30px;
+            font-family: $font__styled;
+            color: #000;
+            margin-top: 30px;
+
+            @include responsive(small) {
+                margin-top: 12px;
+                font-size: 24px;
+            }
+        }
+
+        .designation {
+            opacity: 0.7;
+        }
+    }
+
+}
+
+.story-management-team {
+    padding: 120px 0px;
+    position: relative;
+
+    @include responsive(medium) {
+        padding: 80px 0px;
+    }
+
+    @include responsive(small) {
+        padding: 80px 0px 40px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 15%;
+        height: 100%;
+        background-image: url('./assets/images/our-story/smt-graphic.svg');
+        background-position: bottom left;
+        background-size: contain;
+        z-index: 1;
+        background-repeat: no-repeat;
+    }
+
+    .board-directors-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin-top: 90px;
+
+        @include responsive(medium) {
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        @include responsive(small) {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px 20px;
+            margin-top: 32px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .name {
+            font-size: 30px;
+            font-family: $font__styled;
+            color: #000;
+            margin-top: 30px;
+
+            @include responsive(small) {
+                margin-top: 12px;
+                font-size: 24px;
+            }
+        }
+
+        .designation {
+            opacity: 0.7;
+        }
+    }
+
+}

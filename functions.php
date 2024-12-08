@@ -235,3 +235,7 @@ function add_fontawesome_dropdown_icon($item_output, $item, $depth, $args) {
 add_filter('walker_nav_menu_start_el', 'add_fontawesome_dropdown_icon', 10, 4);
 
 
+//disable gravity forms css
+add_filter( 'gform_disable_form_theme_css', '__return_true' );
+add_filter( 'gform_disable_form_legacy_css', '__return_true' );
+

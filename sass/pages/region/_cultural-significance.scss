@@ -1,0 +1,73 @@
+.ourngura-section1 {
+    &.cultural-significance {
+        h2 {
+            font-size: 30px;
+            margin-bottom: 1.2em;
+        }
+    }
+}
+
+
+
+.story-nyamal-people {
+    &.cultural-significance {
+        .two-cols {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+
+            @include responsive(medium) {
+                gap: 50px;
+                flex-direction: column;
+            }
+
+            .description {
+                max-width: 520px;
+                width: 100%;
+                font-size: 18px;
+                color: #000;
+
+                @include responsive(medium) {
+                    max-width: 100%;
+                }
+
+                p {
+                    margin-bottom: 64px;
+
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+
+                    @include responsive(medium) {
+                        margin-bottom: 1.5em;
+                    }
+                }
+            }
+
+            .quotes {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .author {
+                    font-size: 19px;
+
+                }
+            }
+        }
+
+        .image {
+            margin-top: 80px;
+            margin-bottom: 40px;
+
+            @include responsive(medium) {
+                margin-top: 40px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

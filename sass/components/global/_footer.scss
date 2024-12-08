@@ -55,7 +55,24 @@
                     }
                 }
 
-                .newsletter-form-wapper {}
+                .newsletter-form-wapper {
+                    h2 {
+                        display: none;
+                    }
+
+                    label {
+                        display: none;
+                    }
+
+                    input[type="email"] {
+                        background-image: url('./assets/images/input-newsletter-bg.svg');
+                    }
+
+                    input[type="submit"] {
+                        font-size: 16px;
+                    }
+
+                }
 
                 .footer-locations {
 

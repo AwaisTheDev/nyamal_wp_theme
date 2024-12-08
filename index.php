@@ -1,11 +1,6 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * The template for displaying archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -14,24 +9,19 @@
 
 get_header();
 ?>
+<?php echo get_template_part('template-parts/global/section', "pagetitle") ?> 
 
-	<main id="primary" class="site-main">
-		<div class="nyamal-container">
 
-		
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
+<main id="primary" class="site-main blog-page">
+<div class="padding-vertical">
+<div class="nyamal-container">
+		<?php if ( have_posts() ) : ?>
+            <div>
+			<?php
 			/* Start the Loop */
+            ?>
+            <div class="post-grid">
+            <?php
 			while ( have_posts() ) :
 				the_post();
 
@@ -42,9 +32,16 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
-			endwhile;
+			endwhile;?>
+                </div>
+            <?php
 
-			the_posts_navigation();
+			the_posts_pagination(array(
+                'mid_size' => 2,
+                'prev_text' => __('Previous', 'textdomain'),
+                'next_text' => __('Next', 'textdomain'),
+                'screen_reader_text' => __('Posts navigation', 'textdomain')
+            ));
 
 		else :
 
@@ -52,7 +49,9 @@ get_header();
 
 		endif;
 		?>
+        </div>
 </div>
+    </div>
 	</main><!-- #main -->
 
 <?php
